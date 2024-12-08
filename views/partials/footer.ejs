@@ -1,0 +1,33 @@
+<script>
+    const navTitle = document.querySelector('.nav-title');
+    const navButtons = document.querySelector('.nav-buttons');
+    const readButton = document.querySelector('.read-button');
+    const storyWindow = document.querySelector('.story-window');
+    const redButton = document.querySelector(".red")
+
+    navTitle.addEventListener('click', () => {
+        if (navButtons.style.maxHeight === '0px' || navButtons.style.maxHeight === '') {
+            navButtons.style.maxHeight = navButtons.scrollHeight + 'px';
+        } else {
+            navButtons.style.maxHeight = '0px';
+        }
+    });
+
+    readButton.addEventListener('click', () => {
+        if (storyWindow.style.display === 'none' || storyWindow.style.display === '') {
+            storyWindow.style.display = 'block';
+        } else {
+            storyWindow.style.display = 'none'
+        }
+    });
+
+    redButton.addEventListener('click', () => {
+        if (storyWindow.style.display === 'block') {
+            storyWindow.style.display = 'none';
+        } else {
+            storyWindow.style.display = 'block'
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U&Me</title>
+    <link rel="stylesheet" href="/styles/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pinyon+Script&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <style>
+        .c-page {
+            background-image: url('<%= backgroundImage %>');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            font-family: var(--monstserrat);
+            width: 100%;
+            font-size: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <h1 class="nav-title">U&Me <span style="font-size: 0.8em;">The Multiverse Of Colors</span></h1>
+        <ul class="nav-buttons">
+            <li><a href="/">The Portal</a></li>
+            <% titles.forEach((item, index) => { %>
+                <li><a href="/chapter<%= index + 1 %>"><%= item.title %></a></li>
+            <% }) %>
+        </ul>
+    </div>

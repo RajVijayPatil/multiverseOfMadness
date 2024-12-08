@@ -1,0 +1,41 @@
+<%- include('partials/header.ejs', { backgroundImage: backgroundImage }) %>
+<div class="c-page">
+    <div class="container">
+        <div class="story-window">
+            <div class="window-container">
+                <div class="window-up">
+                    <div class="svg">
+                        <div class="red circles"></div>
+                        <div class="yellow circles"></div>
+                        <div class="green circles"></div>
+                    </div>
+                    <div class="window-title">
+                        <p><%= data.title %></p>
+                    </div>
+                </div>
+                <div class="window-down">
+                    <p><%= data.body %></p>
+                </div>
+            </div>
+        </div>
+        <div class="c1-section up">
+            <h1><%= data.title %></h1>
+            <h2>"<%= data.thought %>"</h2>
+        </div>
+        <div class="c1-section middle">
+            <button class="read-button">Read the Story</button>
+        </div>
+    </div>
+    <div class="section">
+        <div class="index-footer">
+            <% if (chapterNumber === 4) { %>
+                <!-- Redirect to Final -->
+                <a href="/final">Next Chapter</a>
+            <% } else { %>
+                <!-- Default Next Chapter -->
+                <a href="/chapter<%= chapterNumber + 1 %>">Next Chapter</a>
+            <% } %>
+        </div>
+    </div>
+</div>
+<%- include('partials/footer.ejs') %>
